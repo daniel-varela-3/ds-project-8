@@ -21,15 +21,15 @@ tabtitle = "Daniel's Project 9!"
 sourceurl = 'https://www.kaggle.com/datasets/mylesoneill/game-of-thrones?select=character-deaths.csvb'
 githublink = 'https://github.com/daniel-varela-3/ds-project-8'
 
-Region = pd.DataFrame({'Allegiances': ['Arryn', 'Baratheon', 'Greyjoy', 'Lannister', 'Martell',"Night's Watch",'None','Stark','Targaryen','Tully','Tyrell','Wildling'], 'Westeros Location': ['East', 'East', 'West', 'West', 'South',"North",'None','North','East','Midwest','West','North']})
-royalty = pd.DataFrame({'Allegiances': ['Targaryen', 'Baratheon', 'Lannister','Stark'], 'Number of Kings/Queens': [18,3,1,1]})
+# Region = pd.DataFrame({'Allegiances': ['Arryn', 'Baratheon', 'Greyjoy', 'Lannister', 'Martell',"Night's Watch",'None','Stark','Targaryen','Tully','Tyrell','Wildling'], 'Westeros Location': ['East', 'East', 'West', 'West', 'South',"North",'None','North','East','Midwest','West','North']})
+# royalty = pd.DataFrame({'Allegiances': ['Targaryen', 'Baratheon', 'Lannister','Stark'], 'Number of Kings/Queens': [18,3,1,1]})
 
 # list of columns 
 analysis_list=['Death Counts', 'Number of Kings/Queens']
 
 
-###### Import a dataframe #######
-df = pd.read_csv("data/asoiaf_book_deaths.csv")
+# ###### Import a dataframe #######
+# df = pd.read_csv("data/asoiaf_book_deaths.csv")
 
 
 ###### Make changes to dataframe #####
@@ -55,10 +55,10 @@ df = pd.read_csv("data/asoiaf_book_deaths.csv")
 
 
 ########### Initiate the app
-# external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-# app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-# server = app.server
-# app.title=tabtitle
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
+app.title=tabtitle
 
 ########### Set up the layout
 
