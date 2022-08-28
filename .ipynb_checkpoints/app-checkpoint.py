@@ -33,24 +33,24 @@ df = pd.read_csv("data/asoiaf_book_deaths.csv")
 
 
 ###### Make changes to dataframe #####
-df['Death Chapter'].fillna(666, inplace=True)
-df['Death Year'].fillna(666, inplace=True)
-df['Book of Death'].fillna(666, inplace=True)
-df['Book Intro Chapter'].fillna(666, inplace=True)
+# df['Death Chapter'].fillna(666, inplace=True)
+# df['Death Year'].fillna(666, inplace=True)
+# df['Book of Death'].fillna(666, inplace=True)
+# df['Book Intro Chapter'].fillna(666, inplace=True)
 
-df2 = df[df['Death Chapter'] != 666]
-df2["Allegiances"] = df2["Allegiances"].str.replace("House ","")
-df2["Death Count"] = 1
+# df2 = df[df['Death Chapter'] != 666]
+# df2["Allegiances"] = df2["Allegiances"].str.replace("House ","")
+# df2["Death Count"] = 1
 
-df2_grouped = df2.groupby("Allegiances").count().reset_index()
-df2_grouped["Death Count"] = df2_grouped["Death Year"] 
-deaths_by_allegiance = df2_grouped[["Allegiances","Death Count"]]
+# df2_grouped = df2.groupby("Allegiances").count().reset_index()
+# df2_grouped["Death Count"] = df2_grouped["Death Year"] 
+# deaths_by_allegiance = df2_grouped[["Allegiances","Death Count"]]
 
-df3 = pd.merge(deaths_by_allegiance, Region, how="left",left_on="Allegiances",right_on="Allegiances")
+# df3 = pd.merge(deaths_by_allegiance, Region, how="left",left_on="Allegiances",right_on="Allegiances")
 
-df4 = pd.merge(df3, royalty, how = "left", left_on="Allegiances",right_on="Allegiances")
-df4['Number of Kings/Queens'].fillna(0, inplace=True)
-df4.sort_values(by=['Death Count'], inplace=True)
+# df4 = pd.merge(df3, royalty, how = "left", left_on="Allegiances",right_on="Allegiances")
+# df4['Number of Kings/Queens'].fillna(0, inplace=True)
+# df4.sort_values(by=['Death Count'], inplace=True)
 
 
 
