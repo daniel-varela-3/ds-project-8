@@ -12,7 +12,7 @@ import numpy as np
 import os
 import plotly as py
 import plotly.graph_objs as go
-from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+# from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 #init_notebook_mode(connected=True)
 
 
