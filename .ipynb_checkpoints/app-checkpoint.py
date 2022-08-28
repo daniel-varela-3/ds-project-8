@@ -55,10 +55,10 @@ df4.sort_values(by=['Death Count'], inplace=True)
 
 
 ########### Initiate the app
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-server = app.server
-app.title=tabtitle
+# external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+# app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+# server = app.server
+# app.title=tabtitle
 
 ########### Set up the layout
 
@@ -84,35 +84,35 @@ app.layout = html.Div(children=[
 
 
 ######### Interactive callbacks go here #########
-@app.callback(Output('display-value', 'figure'),
-              [Input('dropdown', 'value')])
-def display_value(continuous_var):
+# @app.callback(Output('display-value', 'figure'),
+#               [Input('dropdown', 'value')])
+# def display_value(continuous_var):
     
-    #grouped_mean=df.groupby(['Embarked', 'Cabin Class'])[continuous_var].mean()  #### I Think I need to bring in calcs into here
+#     #grouped_mean=df.groupby(['Embarked', 'Cabin Class'])[continuous_var].mean()  #### I Think I need to bring in calcs into here
     
-    # bring DF, group by X,Y columns... and find mean of Z olumn (which is input to function)
-    location_grouped = df4.groupby(["Westeros Location"])[continuous_var].sum()
-    location_results = pd.DataFrame(location_grouped)
+#     # bring DF, group by X,Y columns... and find mean of Z olumn (which is input to function)
+#     location_grouped = df4.groupby(["Westeros Location"])[continuous_var].sum()
+#     location_results = pd.DataFrame(location_grouped)
     
-    #results=pd.DataFrame(grouped_mean)
+#     #results=pd.DataFrame(grouped_mean)
     
-    # Create a bar chart
-    mydata1 = go.Bar(
-        x=location_results.index,
-        y=location_results[continuous_var],
-        #name='Port Cherbourg',
-        marker=dict(color=color1)
-    )
+#     # Create a bar chart
+#     mydata1 = go.Bar(
+#         x=location_results.index,
+#         y=location_results[continuous_var],
+#         #name='Port Cherbourg',
+#         marker=dict(color=color1)
+#     )
    
-    mylayout = go.Layout(
-        title='Bar chart',
-        xaxis = dict(title = 'Region'), # x-axis label
-        yaxis = dict(title = str(continuous_var)), # y-axis label
+#     mylayout = go.Layout(
+#         title='Bar chart',
+#         xaxis = dict(title = 'Region'), # x-axis label
+#         yaxis = dict(title = str(continuous_var)), # y-axis label
 
-    )
-    fig = go.Figure(data=[mydata1], layout=mylayout)
-    return fig
+#     )
+#     fig = go.Figure(data=[mydata1], layout=mylayout)
+#     return fig
 
-############ Deploy
-if __name__ == '__main__':
-    app.run_server(debug=True)
+# ############ Deploy
+# if __name__ == '__main__':
+#     app.run_server(debug=True)
