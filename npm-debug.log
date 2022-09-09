@@ -1,0 +1,69 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/studio-lab-user/.conda/envs/studiolab/bin/node',
+1 verbose cli   '/home/studio-lab-user/.conda/envs/studiolab/bin/npm',
+1 verbose cli   'show',
+1 verbose cli   '@heroku-cli/plugin-heroku-repo',
+1 verbose cli   'dist-tags' ]
+2 info using npm@3.10.10
+3 info using node@v6.13.1
+4 silly mapToRegistry name @heroku-cli/plugin-heroku-repo
+5 silly mapToRegistry scope (from package name) @heroku-cli
+6 verbose mapToRegistry no registry URL found in name for scope @heroku-cli
+7 silly mapToRegistry using default registry
+8 silly mapToRegistry registry https://registry.npmjs.org/
+9 silly mapToRegistry data Result {
+9 silly mapToRegistry   raw: '@heroku-cli/plugin-heroku-repo',
+9 silly mapToRegistry   scope: '@heroku-cli',
+9 silly mapToRegistry   escapedName: '@heroku-cli%2fplugin-heroku-repo',
+9 silly mapToRegistry   name: '@heroku-cli/plugin-heroku-repo',
+9 silly mapToRegistry   rawSpec: '',
+9 silly mapToRegistry   spec: 'latest',
+9 silly mapToRegistry   type: 'tag' }
+10 silly mapToRegistry uri https://registry.npmjs.org/@heroku-cli%2fplugin-heroku-repo
+11 verbose request uri https://registry.npmjs.org/@heroku-cli%2fplugin-heroku-repo
+12 verbose request no auth needed
+13 info attempt registry request try #1 at 8:01:13 PM
+14 verbose request id 6d12a63c24ab7e91
+15 http request GET https://registry.npmjs.org/@heroku-cli%2fplugin-heroku-repo
+16 http 404 https://registry.npmjs.org/@heroku-cli%2fplugin-heroku-repo
+17 verbose headers { date: 'Fri, 09 Sep 2022 20:01:13 GMT',
+17 verbose headers   'content-type': 'application/json',
+17 verbose headers   'content-length': '21',
+17 verbose headers   connection: 'keep-alive',
+17 verbose headers   vary: 'Accept-Encoding',
+17 verbose headers   server: 'cloudflare',
+17 verbose headers   'cf-ray': '748283bdbf8a2d91-ORD' }
+18 silly get cb [ 404,
+18 silly get   { date: 'Fri, 09 Sep 2022 20:01:13 GMT',
+18 silly get     'content-type': 'application/json',
+18 silly get     'content-length': '21',
+18 silly get     connection: 'keep-alive',
+18 silly get     vary: 'Accept-Encoding',
+18 silly get     server: 'cloudflare',
+18 silly get     'cf-ray': '748283bdbf8a2d91-ORD' } ]
+19 verbose stack Error: Not found : @heroku-cli/plugin-heroku-repo
+19 verbose stack     at makeError (/home/studio-lab-user/.conda/envs/studiolab/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+19 verbose stack     at CachingRegistryClient.<anonymous> (/home/studio-lab-user/.conda/envs/studiolab/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+19 verbose stack     at Request._callback (/home/studio-lab-user/.conda/envs/studiolab/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+19 verbose stack     at Request.self.callback (/home/studio-lab-user/.conda/envs/studiolab/lib/node_modules/npm/node_modules/request/request.js:187:22)
+19 verbose stack     at emitTwo (events.js:106:13)
+19 verbose stack     at Request.emit (events.js:191:7)
+19 verbose stack     at Request.<anonymous> (/home/studio-lab-user/.conda/envs/studiolab/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+19 verbose stack     at emitOne (events.js:96:13)
+19 verbose stack     at Request.emit (events.js:188:7)
+19 verbose stack     at IncomingMessage.<anonymous> (/home/studio-lab-user/.conda/envs/studiolab/lib/node_modules/npm/node_modules/request/request.js:969:12)
+20 verbose statusCode 404
+21 verbose pkgid @heroku-cli/plugin-heroku-repo
+22 verbose cwd /home/studio-lab-user/intuit-ga-dat17/projects/ds-project-8
+23 error Linux 4.14.287-215.504.amzn2.x86_64
+24 error argv "/home/studio-lab-user/.conda/envs/studiolab/bin/node" "/home/studio-lab-user/.conda/envs/studiolab/bin/npm" "show" "@heroku-cli/plugin-heroku-repo" "dist-tags"
+25 error node v6.13.1
+26 error npm  v3.10.10
+27 error code E404
+28 error 404 Not found : @heroku-cli/plugin-heroku-repo
+29 error 404
+30 error 404 '@heroku-cli/plugin-heroku-repo' is not in the npm registry.
+31 error 404 You should bug the author to publish it (or use the name yourself!)
+32 error 404 Note that you can also install from a
+33 error 404 tarball, folder, http url, or git url.
+34 verbose exit [ 1, true ]

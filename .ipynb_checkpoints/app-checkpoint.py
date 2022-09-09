@@ -1,6 +1,8 @@
 #### THIS IS A COPY -- DELETE AND REPLACE ALL
 
-
+# note for after PTO:
+# not able to deploy to Heroku...
+# having trouble pushing, bc of an app I deleted that is still coming up in here (week-3)
 
 ######### Import your libraries #######
 import dash
